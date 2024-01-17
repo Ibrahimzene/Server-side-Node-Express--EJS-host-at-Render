@@ -14,13 +14,11 @@
         <p>There are
             <%= books.length %> books.
         </p>
-        <ul>
+        <div>
             <% books.forEach((book) => { %>
-            <li>
-                <%= book.title %>
-            </li>
+                <img class="book" src="images/books/<%=book.idCode%>.png"/>
             <% }) %>
-        </ul>
+        </div>
     </div>
 </body>
 
