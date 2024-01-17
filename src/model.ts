@@ -7,7 +7,15 @@ export const getBooks = () => {
 		const response = await axios.get(bookUrl);
 		const rawBooks = response.data;
 		const books: IBook[] = [];
-
+		for (const rawBook of rawBooks) {
+			const book:IBook = {
+				idCode: rawBook.idcode,
+				title: rawBook.title,
+				description: rawBook.description,
+				buyUrl: rawBook.buyurl
+			}
+			books.push(book);
+		}
 		resolve(books);
 	})
 }
