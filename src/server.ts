@@ -8,9 +8,18 @@ const baseDir = process.cwd();
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(baseDir, '/src/views'));
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-	res.render('pages/welcome', {title: 'The Welcome Page', books: model.getBooks()});
+	res.render('pages/welcome', {title: 'The Welcome Page' });
+});
+
+app.get('/books', (req, res) => {
+	res.render('pages/books', {books: model.getBooks()});
+});
+
+app.get('/about', (req, res) => {
+	res.render('pages/about', {});
 });
 
 app.listen(config.getPort(), () => {
