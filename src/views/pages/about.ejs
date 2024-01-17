@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<%- include('../partials/htmlHead') %>
 	<link rel="stylesheet" href="css/main.css">
-    <title>about</title>
+    <title>Info Site</title>
 </head>
 
 <body>
-    <h1>about</h1>
-    <p>eie are stort books</p>
+	<%- include('../partials/header') %>
+    <%- include('../partials/menu', {pageIdCode: 'about'})%>
+    <p>This is the about page.</p>
 </body>
 
 </html>

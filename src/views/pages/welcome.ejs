@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Node Express Site with EJS Hosted on Render</title>
+	<%- include('../partials/htmlHead') %>
+	<link rel="stylesheet" href="css/main.css">
+    <title>Info Site</title>
 </head>
+
 <body>
-	<h1>Node Express Site with EJS Hosted on Render</h1>	
-	<%- include('../partials/menu', {pageIdCode: 'welcome'})%>
+	<%- include('../partials/header') %>
+    <%- include('../partials/menu', {pageIdCode: 'welcome'})%>
+    <p>Welcome to this site.</p>
 </body>
+
 </html>

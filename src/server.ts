@@ -11,7 +11,11 @@ app.set('views', path.join(baseDir, '/src/views'));
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-	res.render('pages/welcome', {title: 'The Welcome Page' });
+	res.render('pages/welcome');
+});
+
+app.get('/welcome', (req, res) => {
+	res.render('pages/welcome');
 });
 
 app.get('/books', (req, res) => {

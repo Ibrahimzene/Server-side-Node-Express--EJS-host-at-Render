@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>books</title>
+	<%- include('../partials/htmlHead') %>
+	<link rel="stylesheet" href="css/main.css">
+    <title>Info Site</title>
 </head>
+
 <body>
-    <h1>here are Boooks</h1>
+	<%- include('../partials/header') %>
+    <%- include('../partials/menu', {pageIdCode: 'books'})%>
+    <div>
+        <p>There are
+            <%= books.length %> books.
+        </p>
+        <ul>
+            <% books.forEach((book) => { %>
+            <li>
+                <%= book.title %>
+            </li>
+            <% }) %>
+        </ul>
+    </div>
 </body>
+
 </html>
