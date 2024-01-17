@@ -11,10 +11,11 @@
 	<%- include('../partials/header') %>
     <%- include('../partials/menu', {pageIdCode: 'book'})%>
     <div class="book">
-		<img class="book" src="../images/books/<%=book.idCode%>.png"/>
+		<img class="book" src="../images/<%=book.idCode%>.png"/>
 		<div>
 			<p class="title"><%=book.title%></p>
 			<p class="description"><%=book.description%></p>
+			<p class="amazon"><a target="_blank" href="<%=book.buyUrl%>">Buy at Amazon</a></p>
 		</div>
 	</div>
 </body>
