@@ -4,6 +4,8 @@
 <head>
 	<%- include('../partials/htmlHead') %>
 	<link rel="stylesheet" href="css/main.css">
+    <meta property="og:title" content="Edward's books'"/>
+    <meta property="og:description" content="These are all of Edward's books that he is currently reading.'"/>
     <title>Info Site</title>
 </head>
 
@@ -16,7 +18,7 @@
         </p>
         <div class="books">
             <% books.forEach((book) => { %>
-                <a href="<%=book.idCode%>%>"><img class="book" src="images/<%=book.idCode%>.png"/></a>
+                <a href="book/<%=book.idCode%>"><img class="book" src="images/books/<%=book.idCode%>.png"/></a>
             <% }) %>
         </div>
     </div>
