@@ -1,7 +1,12 @@
 import express from "express";
+import path from "path";
+import * as config from "./config";
 
 const app = express();
-const port = 1724;
+const baseDir = process.cwd();
+
+app.set('view engine', 'ejs');
+app.set('views', `$baseDir/src/views`);
 
 app.get("/", (req, res) => {
 	const siteTitle = "Node Express Site with EJS Hosted on Render";
