@@ -27,3 +27,13 @@ nav a.active {
 	padding: 1rem;
 	border-radius: .3rem;
 }
+
+div.books {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+img.book {
+	width: 10rem;
+	height: fit-content;
+}
