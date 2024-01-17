@@ -37,3 +37,7 @@ img.book {
 	width: 10rem;
 	height: fit-content;
 }
+div.book {
+	display: flex;
+	gap: 1rem;
+}
