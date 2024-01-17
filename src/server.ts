@@ -19,7 +19,14 @@ app.get('/welcome', (req, res) => {
 });
 
 app.get('/books', async (req, res) => {
-	res.render('pages/books', {books: await model.getBooks()});
+	res.render('pages/books', { books: await model.getBooks() });
+});
+
+app.get('/book/:idCode', async (req, res) => {
+	const idCode = req.params.idCode;
+	const books = await model.getBooks();
+	const book = books.find(m => m.idCode === idCode);
+	res.render('pages/book', { book });
 });
 
 app.get('/about', (req, res) => {

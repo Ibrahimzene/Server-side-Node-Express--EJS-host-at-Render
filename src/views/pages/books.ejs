@@ -14,9 +14,9 @@
         <p>There are
             <%= books.length %> books.
         </p>
-        <div>
+        <div class="books">
             <% books.forEach((book) => { %>
-                <img class="book" src="images/<%=book.idCode%>.png"/>
+                <a href="<%=book.idCode%>%>"><img class="book" src="images/<%=book.idCode%>.png"/></a>
             <% }) %>
         </div>
     </div>

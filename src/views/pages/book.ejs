@@ -1,1 +1,18 @@
-book: <%=bookIdCode%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<%- include('../partials/htmlHead') %>
+	<link rel="stylesheet" href="../css/main.css">
+    <title>Info Site</title>
+</head>
+
+<body>
+	<%- include('../partials/header') %>
+    <%- include('../partials/menu', {pageIdCode: 'book'})%>
+    <div class="book">
+		<p><%=book.title%></p>
+	</div>
+</body>
+
+</html>
