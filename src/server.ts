@@ -1,10 +1,10 @@
-import express from 'express';
+import express from "express";
 
 const app = express();
-const port = 4115;
+const port = 1724;
 
-app.get('/', (req, res) => {
-	const siteTitle = 'The Info Site';
+app.get("/", (req, res) => {
+	const siteTitle = "Node Express Site with EJS Hosted on Render";
 	res.send(`
 <html>
 	<head>
@@ -13,20 +13,19 @@ app.get('/', (req, res) => {
 	</head>
 	<body>
 		<h1>${siteTitle}</h1>
-		<p>Welcome to this site.</p>
+		<p>Declare the server-side build process for a Node Express site by incorporating EJS, and specify the hosting platform as Render. This involves setting up the necessary configurations, dependencies, and deploying the application to Render for public access.</p>
 	</body>
 </html>
 	`);
 });
 
-app.get('/css/main.css', (req, res) => {
+app.get("/css/main.css", (req, res) => {
 	res.send(`
 body {
-	color: red;
+	color: #545454;
 }
-	`)
-})
-
+	`);
+});
 
 app.listen(port, () => {
 	console.log(`Listening at http://localhost:${port}`);
