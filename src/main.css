@@ -1,10 +1,23 @@
 body {
-    color: #545454;
-}
-::backdrop {
     background: rgb(84,84,84);
     background: -moz-linear-gradient(349deg, rgba(84,84,84,1) 46%, rgba(218,218,221,1) 81%);
     background: -webkit-linear-gradient(349deg, rgba(84,84,84,1) 46%, rgba(218,218,221,1) 81%);
     background: linear-gradient(349deg, rgba(84,84,84,1) 46%, rgba(218,218,221,1) 81%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#545454",endColorstr="#dadadd",GradientType=1);
+}
+nav {
+	background-color: #aaa;
+	padding: .5rem;
+	display: flex;
+	gap: 1rem;
+}
+
+nav a {
+	text-decoration: none;
+	color: #333;
+}
+
+nav a.active {
+	color: brown;
+	font-weight: bold;
 }
