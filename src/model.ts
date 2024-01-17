@@ -8,6 +8,9 @@ export const getBooks = () => {
 		},
 		{
 			title: "Book 3"
+		},
+		{
+			title: "Book 4"
 		}
 	]
 }
